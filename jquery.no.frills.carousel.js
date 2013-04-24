@@ -4,6 +4,12 @@
 
     return $(this).each(function () {
 
+      /* config */
+      
+      var speed = 500;
+      
+      /* end */
+
       var $this = $(this);
             
       var overview = $this.find('ul.overview');
@@ -29,7 +35,7 @@
       $this.find('a.prev').on('click', function(){
         if(position > 0) {
           var new_position = "+=" + width;
-          overview.animate({left: new_position}, 100);
+          overview.animate({left: new_position}, speed);
           position--;
         };
         return false;
@@ -40,7 +46,7 @@
         if(position - (count - itemsToDisplayCount) < 0) {
           var overview = $this.find('ul.overview');
           var new_position = "-=" + width;
-          overview.animate({left: new_position}, 100);
+          overview.animate({left: new_position}, speed);
           position++;
         };
         return false;
