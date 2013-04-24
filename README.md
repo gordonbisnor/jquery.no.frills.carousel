@@ -15,7 +15,7 @@ Use
 
     <script type="text/javascript">
         $(document).ready(function(){ 
-          $('.carousel').tinycarousel(); 
+          $('.carousel').NoFrillsCarousel(); 
         });
     </script> 
 
@@ -24,11 +24,11 @@ HTML Structure
 --------------
 
     <div class="carousel">
-      <a class="prev" href="#">Previous</a>
+      <a class="prev" href="#"></a>
       <div class="viewport">
-        <ul class="overview">
-          <li><img src="my_image.png"/></li>
+        <ul>
+          <li></li>
         </ul>
       </div>
-      <a class="next" href="#">Next</a>
+      <a class="next" href="#"></a>
     </div>
