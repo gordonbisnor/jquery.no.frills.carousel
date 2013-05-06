@@ -1,12 +1,14 @@
 (function($) {
 
-  $.fn.NoFrillsCarousel = function() {
+  $.fn.NoFrillsCarousel = function(args) {
 
     return $(this).each(function () {
 
       /* config */
       
-      var speed = 500;
+      var jump = args.jump || 1;
+
+      var speed = args.speed || 500;
       
       /* end */
 
@@ -34,9 +36,9 @@
       /* backwards */
       $this.find('a.prev').on('click', function(){
         if(position > 0) {
-          var new_position = "+=" + width;
+          var new_position = "+=" + (width*jump);
           overview.animate({left: new_position}, speed);
-          position--;
+          position = position - jump;
         };
         return false;
       }); /* end backwards */
@@ -45,9 +47,9 @@
       $this.find('a.next').on('click', function(){
         if(position - (count - itemsToDisplayCount) < 0) {
           var overview = $this.find('ul.overview');
-          var new_position = "-=" + width;
+          var new_position = "-=" + (width*jump);
           overview.animate({left: new_position}, speed);
-          position++;
+          position = position + jump;
         };
         return false;
       }); /* end forwards */
