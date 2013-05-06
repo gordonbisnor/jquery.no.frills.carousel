@@ -22,8 +22,8 @@ Use
 
 Options
 -------
-Speed - integer, milliseconds, animation speed, default: 500
-Jump - integer, number to jump per click of prev/next, default: 1 
+- Speed - integer, milliseconds, animation speed, default: 500
+- Jump - integer, number to jump per click of prev/next, default: 1 
 
 HTML Structure 
 --------------
