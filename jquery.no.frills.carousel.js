@@ -1,3 +1,10 @@
+
+/*!
+ * No Frills Carousel v1.0.1
+ * http://github.com/gordonbisnor/jquery.no.frills.carousel
+ * 
+ */
+ 
 (function($) {
 
   $.fn.NoFrillsCarousel = function(args) {
