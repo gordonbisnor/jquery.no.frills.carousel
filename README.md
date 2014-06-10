@@ -8,17 +8,20 @@ I was using Tiny Carousel, which was serving my needs just fine, but it mysterio
 Install
 -------
 
-    <script src="jquery.no.frills.carousel.min.js"></script>
+``` html
+<script src="jquery.no.frills.carousel.min.js"></script>
+```
 
 Use
 ---
 
-    <script type="text/javascript">
-        $(document).ready(function(){ 
-          $('.carousel').NoFrillsCarousel({speed:250,jump:4}); 
-        });
-    </script> 
-
+``` html
+<script type="text/javascript">
+    $(document).ready(function(){ 
+      $('.carousel').NoFrillsCarousel({speed:250,jump:4}); 
+    });
+</script> 
+```
 
 Options
 -------
@@ -28,12 +31,14 @@ Options
 HTML Structure 
 --------------
 
-    <div class="carousel">
-      <a class="prev" href="#"></a>
-      <div class="viewport">
-        <ul>
-          <li></li>
-        </ul>
-      </div>
-      <a class="next" href="#"></a>
-    </div>
+``` html
+<div class="carousel">
+  <a class="prev" href="#"></a>
+  <div class="viewport">
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+  <a class="next" href="#"></a>
+</div>
+```
