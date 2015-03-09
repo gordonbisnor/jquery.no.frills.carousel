@@ -13,8 +13,10 @@
 
       /* config */
       
+      /* how many spots to move each time */
       var jump = args.jump || 1;
 
+      /* how fast the carousel will change  */ 
       var speed = args.speed || 500;
       
       /* end */
@@ -42,21 +44,33 @@
 
       /* backwards */
       $this.find('a.prev').on('click', function(){
+
+        /* if you are able to go back */
         if(position > 0) {
           var new_position = "+=" + (width*jump);
           overview.animate({left: new_position}, speed);
           position = position - jump;
-        };
+        } else {
+          /* cannot go back so mark as inactive */
+          $this.find('a.prev').addClass('inactive');
+          $this.find('a.next').addClass('active');
+        } 
+        ;
         return false;
       }); /* end backwards */
 
       /* forwards */
       $this.find('a.next').on('click', function(){
+        /* if you are able to go forwards */
         if(position - (count - itemsToDisplayCount) < 0) {
           var overview = $this.find('ul.overview');
           var new_position = "-=" + (width*jump);
           overview.animate({left: new_position}, speed);
           position = position + jump;
+        } else {
+          /* cannot go forwards to mark as inactive */
+          $this.find('a.next').addClass('inactive');
+          $this.find('a.prev').addClass('active');
         };
         return false;
       }); /* end forwards */

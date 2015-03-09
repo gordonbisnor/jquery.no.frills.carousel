@@ -1,0 +1,22 @@
+{
+  "name": "jquery.no.frills.carousel",
+  "main": "jquery.no.frills.carousel.js",
+  "version": "1.0.1",
+  "homepage": "https://github.com/gordonbisnor/jquery.no.frills.carousel",
+  "authors": [
+    "Gordon B. Isnor <gordonbisnor@gmail.com>"
+  ],
+  "description": "The world needs more jQuery carousels, so I'm doing what I can.",
+  "keywords": [
+    "carousel",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
